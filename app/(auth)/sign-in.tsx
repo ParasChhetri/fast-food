@@ -8,7 +8,8 @@ const SignIn = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [form, setForm] = useState({email : '', password : ''});
     const submit = async () => {
-        if(!form.email || !form.password) return Alert.alert('Error', 'Please Enter valid email address and password');
+        const {email, password} = form;
+        if(!email || !password) return Alert.alert('Error', 'Please Enter valid email address and password');
         setIsSubmitting(true);
         try{
             // appwrite sign in 
