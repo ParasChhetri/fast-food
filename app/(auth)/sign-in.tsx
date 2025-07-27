@@ -16,7 +16,7 @@ const SignIn = () => {
             router.replace('/')
         }
         catch (error : any) {
-            Alert.alert('Error', error.message);
+            Alert.alert('Error', error.message); 
         } finally {
             setIsSubmitting(false);
         }
